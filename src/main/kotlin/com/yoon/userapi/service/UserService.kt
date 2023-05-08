@@ -14,8 +14,8 @@ class UserService {
     lateinit var userRepository: UserRepository
 
     fun getUsers(): List<GetUserDto> {
-        val user = userRepository.findAll()
-        return user.map { it.getUser() }
+        val users = userRepository.findAll()
+        return users.map { it.getUser() }
     }
 
     @Transactional
